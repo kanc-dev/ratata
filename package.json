@@ -7,7 +7,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "prepare": "husky"
+    "prepare": "husky",
+    "docker:build": "docker compose build",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down",
+    "docker:restart": "docker compose restart",
+    "docker:logs": "docker compose logs -f",
+    "docker:ps": "docker compose ps",
+    "docker:rebuild": "docker compose down && docker compose up -d --build",
+    "docker:clean": "docker compose down && docker rmi ratata-website:latest"
   },
   "dependencies": {
     "next": "16.0.0",
