@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ratata — Cute • Chaotic • Cheesy (Solana)</title>
+    <meta name="description" content="Ratata: a playful NFT collection and meme token on Solana. Mint, stake, join the DAO, and collect cheese!" />
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+      .hero-illustration {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+      
+      .chip {
+        background: linear-gradient(90deg, #fef3c7, #fce7f3);
+        padding: 6px 10px;
+        border-radius: 9999px;
+        display: inline-block;
+      }
+      
+      .logo-placeholder {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+    </style>
+  </head>
+  
+  <body class="min-h-screen bg-gradient-to-b from-purple-50 via-white to-blue-50 text-gray-900 antialiased">
+    
+    <!-- Header -->
+    <header class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-400 to-yellow-300 flex items-center justify-center shadow-lg">
+          <span class="text-2xl">🐭</span>
+        </div>
+        <div>
+          <h1 class="text-lg font-bold">Ratata</h1>
+          <p class="text-xs text-gray-600">Cute • Chaotic • Cheesy — on Solana</p>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#about" class="hover:underline">About</a>
+        <a href="#chart" class="hover:underline">Chart</a>
+        <a href="#roadmap" class="hover:underline">Roadmap</a>
+        <a href="#utility" class="hover:underline">Utility</a>
+        <a href="#mint" class="px-4 py-2 bg-yellow-300 rounded-lg shadow hover:shadow-md transition">Mint / Buy</a>
+      </nav>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-12">
+      
+      <!-- Hero Section -->
+      <section class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h2 class="text-4xl font-extrabold leading-tight">
+            Born in the tunnels of Solana, Ratata blends humor and heart
+          </h2>
+          <p class="mt-4 text-gray-700">
+            Ratata blends humor and heart in a collection of charming NFTs and a community-driven token. 
+            Cute, chaotic, and unstoppable — Ratata is the funny face of Solana's creative spirit.
+          </p>
+
+          <div class="mt-6 flex gap-3">
+            <a href="#mint" class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-purple-500 text-white font-medium shadow hover:shadow-lg transition">
+              Mint NFTs →
+            </a>
+            <a href="#roadmap" class="inline-flex items-center gap-2 px-4 py-3 rounded-full border border-gray-200 text-sm hover:bg-gray-50 transition">
+              See Roadmap
+            </a>
+          </div>
+
+          <div class="mt-6 grid grid-cols-2 gap-3 md:grid-cols-4">
+            <div class="p-3 bg-white rounded-lg shadow text-center">
+              <h3 class="text-sm font-semibold">Genesis NFTs</h3>
+              <p class="text-lg font-bold">1,111</p>
+            </div>
+            <div class="p-3 bg-white rounded-lg shadow text-center">
+              <h3 class="text-sm font-semibold">Token</h3>
+              <p class="text-lg font-bold">$RATA</p>
+            </div>
+            <div class="p-3 bg-white rounded-lg shadow text-center">
+              <h3 class="text-sm font-semibold">Chain</h3>
+              <p class="text-lg font-bold">Solana</p>
+            </div>
+            <div class="p-3 bg-white rounded-lg shadow text-center">
+              <h3 class="text-sm font-semibold">Tagline</h3>
+              <p class="text-xs font-bold">Cute • Chaotic • Cheesy</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Card with NFT Data -->
+        <div class="flex items-center justify-center">
+          <div id="nftCard" class="w-full max-w-sm bg-white rounded-2xl p-6 shadow-2xl">
+            <div class="flex items-center justify-center h-80 bg-gray-100 rounded-lg">
+              <div class="animate-pulse text-gray-400">Loading NFT...</div>
+            </div>
+            <div class="mt-4">
+              <h4 class="font-bold">Loading...</h4>
+              <p class="text-sm text-gray-500">Fetching NFT data...</p>
+              <div class="mt-3 flex items-center justify-between">
+                <span class="text-sm">Owner: ---</span>
+                <button class="inline-flex items-center gap-2 px-3 py-2 bg-yellow-300 rounded shadow hover:shadow-md transition">
+                  Buy • --- SOL
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Roadmap Section -->
+      <section id="roadmap" class="mt-16 bg-white p-8 rounded-lg shadow">
+        <h3 class="text-2xl font-bold">🐭 Ratata Roadmap 2025</h3>
+        <p class="mt-2 text-gray-600">
+          From the blockchain's basement to Solana's spotlight — one cheese at a time.
+        </p>
+
+        <div class="mt-6 space-y-6">
+          <!-- Phase 1 -->
+          <div class="border-l-4 border-yellow-400 pl-4">
+            <h4 class="font-semibold text-lg">Phase 1: The Great Escape 🧀</h4>
+            <p class="text-sm text-gray-700 mt-2">Where every legend begins... in the sewers.</p>
+            <ul class="list-disc list-inside mt-2 text-sm text-gray-600 space-y-1">
+              <li>Launch of Ratata Token ($RATA) on Solana</li>
+              <li>Community formation on X, Discord & Telegram</li>
+              <li>Release of Genesis Ratata NFT Collection (1,111 pieces)</li>
+              <li>Early holder rewards & meme competitions</li>
+              <li>Partnerships with Solana-based communities</li>
+            </ul>
+          </div>
+
+          <!-- Phase 2 -->
+          <div class="border-l-4 border-purple-400 pl-4">
+            <h4 class="font-semibold text-lg">Phase 2: The Cheese Chase 🚀</h4>
+            <p class="text-sm text-gray-700 mt-2">Ratata runs faster when it smells opportunity.</p>
+            <ul class="list-disc list-inside mt-2 text-sm text-gray-600 space-y-1">
+              <li>Staking platform for NFT holders</li>
+              <li>"Cheese Vault" — rewards pool in $RATA</li>
+              <li>Limited-edition Ratata Merch Drop (digital + physical)</li>
+              <li>Expansion of the Ratata Universe (mini lore + comics)</li>
+              <li>First IRL community event / giveaway</li>
+            </ul>
+          </div>
+
+          <!-- Phase 3 -->
+          <div class="border-l-4 border-blue-400 pl-4">
+            <h4 class="font-semibold text-lg">Phase 3: Rataverse Expansion 🌐</h4>
+            <p class="text-sm text-gray-700 mt-2">Beyond memes, into the metaverse.</p>
+            <ul class="list-disc list-inside mt-2 text-sm text-gray-600 space-y-1">
+              <li>Launch of Ratata 3D avatars for use in virtual spaces</li>
+              <li>NFT integration with Solana gaming platforms</li>
+              <li>Partnership with indie creators for Ratata-themed art collabs</li>
+              <li>DAO setup for community governance</li>
+              <li>Charity initiative: "Rats for Good" — supporting art education</li>
+            </ul>
+          </div>
+
+          <!-- Phase 4 -->
+          <div class="border-l-4 border-pink-400 pl-4">
+            <h4 class="font-semibold text-lg">Phase 4: The Cheese Empire 👑</h4>
+            <p class="text-sm text-gray-700 mt-2">From funny to legendary.</p>
+            <ul class="list-disc list-inside mt-2 text-sm text-gray-600 space-y-1">
+              <li>Global marketing & influencer collabs</li>
+              <li>Ratata mobile mini-game (collect cheese, earn tokens)</li>
+              <li>Launch of the Ratata Marketplace</li>
+              <li>Bridge to multi-chain ecosystems</li>
+              <li>Surprise drops & long-term utility expansion</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-8 p-4 bg-gradient-to-r from-yellow-50 to-purple-50 rounded-lg">
+          <p class="font-semibold">🐀 Tagline:</p>
+          <p class="text-sm text-gray-700">Cute. Chaotic. Cheesy. Ratata runs Solana.</p>
+        </div>
+      </section>
+
+      <!-- Utility & Ecosystem -->
+      <section id="utility" class="mt-12 bg-gradient-to-r from-white to-purple-50 p-8 rounded-lg shadow">
+        <h3 class="text-2xl font-bold">🚀 Utility & Ecosystem</h3>
+        <div class="mt-4 space-y-3 text-gray-700">
+          <p>
+            🎟 <strong>NFT Perks:</strong> 
+            Holding Ratata NFTs gives staking boosts & exclusive rewards in $RATA.
+          </p>
+          <p>
+            🧀 <strong>Cheese Vault:</strong> 
+            Community staking pool where holders earn cheese (rewards) every epoch.
+          </p>
+          <p>
+            🗳 <strong>Governance:</strong> 
+            DAO voting for roadmap direction, collabs, and charity initiatives.
+          </p>
+          <p>
+            🛍 <strong>Merch & Events:</strong> 
+            $RATA can be used for limited merch drops and Ratata IRL events.
+          </p>
+          <p>
+            🕹 <strong>Mini-Game Integration:</strong> 
+            Collect cheese, upgrade your Ratata, and earn token rewards.
+          </p>
+        </div>
+      </section>
+
+      <!-- Security -->
+      <section id="security" class="mt-12 bg-white p-8 rounded-lg shadow">
+        <h3 class="text-2xl font-bold">🔒 Security & Transparency</h3>
+        <ul class="list-disc list-inside mt-4 text-sm text-gray-700 space-y-2">
+          <li>Smart contract audited by Solana security partners</li>
+          <li>Liquidity locked for 12 months</li>
+          <li>Team tokens vested gradually to maintain long-term trust</li>
+        </ul>
+      </section>
+
+      <!-- Live Chart Section -->
+      <section id="chart" class="mt-12 bg-white p-8 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-bold">📈 Live Chart & Trading</h3>
+        <p class="text-gray-700 mt-2 mb-6">
+          Track $RATA token price and trading activity in real-time.
+        </p>
+        
+        <!-- DexScreener Embed -->
+        <div class="w-full">
+          <iframe
+            src="https://dexscreener.com/bsc/0xe501b06868b15bfacbfbf91f84a9607700ae208f?embed=1&theme=dark&trades=0&info=0"
+            style="width: 100%; height: 500px; border: 0; border-radius: 12px;"
+            title="DexScreener Chart"
+          ></iframe>
+        </div>
+        
+        <!-- Quick Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+          <div class="p-4 bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg text-center">
+            <p class="text-xs text-gray-600 mb-1">Price</p>
+            <p class="text-lg font-bold text-green-600">View Chart</p>
+          </div>
+          <div class="p-4 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg text-center">
+            <p class="text-xs text-gray-600 mb-1">24h Volume</p>
+            <p class="text-lg font-bold text-blue-600">Live Data</p>
+          </div>
+          <div class="p-4 bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg text-center">
+            <p class="text-xs text-gray-600 mb-1">Market Cap</p>
+            <p class="text-lg font-bold text-purple-600">On Chain</p>
+          </div>
+          <div class="p-4 bg-gradient-to-br from-yellow-50 to-orange-50 rounded-lg text-center">
+            <p class="text-xs text-gray-600 mb-1">Holders</p>
+            <p class="text-lg font-bold text-orange-600">Growing</p>
+          </div>
+        </div>
+        
+        <!-- Trading Links -->
+        <div class="mt-6 flex gap-3 flex-wrap justify-center">
+          <a 
+            href="https://dexscreener.com/bsc/0xe501b06868b15bfacbfbf91f84a9607700ae208f" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-blue-500 text-white font-medium shadow hover:shadow-lg transition"
+          >
+            📊 View on DexScreener
+          </a>
+          <a 
+            href="#" 
+            class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-yellow-300 text-gray-900 font-medium shadow hover:shadow-lg transition"
+          >
+            🥞 Trade on PancakeSwap
+          </a>
+        </div>
+      </section>
+
+      <!-- Minting Section -->
+      <section id="mint" class="mt-12 bg-gradient-to-br from-purple-100 to-yellow-100 p-8 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-bold">🎨 Minting</h3>
+        <p class="text-gray-700 mt-2">
+          Genesis Mint — 1,111 Ratata NFTs. Connect your wallet to mint.
+        </p>
+
+        <div class="mt-6 flex gap-3 flex-wrap">
+          <button 
+            id="connectWallet" 
+            class="px-6 py-3 rounded-full bg-yellow-300 font-medium shadow hover:shadow-lg transition"
+          >
+            Connect Wallet
+          </button>
+          <button 
+            id="mintButton" 
+            class="px-6 py-3 rounded-full border bg-white text-gray-700 hidden hover:bg-gray-50 transition"
+          >
+            Mint Ratata NFT
+          </button>
+        </div>
+        
+        <p id="walletAddress" class="text-sm text-gray-600 mt-3"></p>
+      </section>
+
+      <!-- Footer -->
+      <footer class="mt-16 py-8 text-center text-sm text-gray-600 border-t border-gray-200">
+        <p>© 2025 Ratata — Built on Solana. All rights reserved.</p>
+        <p class="mt-2">
+          Join us on 
+          <a href="#" class="underline hover:text-purple-600">Discord</a> • 
+          <a href="#" class="underline hover:text-purple-600">Twitter</a> • 
+          <a href="#" class="underline hover:text-purple-600">Telegram</a>
+        </p>
+      </footer>
+      
+    </main>
+
+    <!-- Wallet Connection Script (Phantom) -->
+    <script>
+      const connectWalletBtn = document.getElementById('connectWallet');
+      const mintButton = document.getElementById('mintButton');
+      const walletAddress = document.getElementById('walletAddress');
+
+      async function connectWallet() {
+        try {
+          if (window.solana && window.solana.isPhantom) {
+            const resp = await window.solana.connect({ onlyIfTrusted: false });
+            const publicKey = resp.publicKey.toString();
+            walletAddress.textContent = `Connected: ${publicKey.slice(0, 4)}...${publicKey.slice(-4)}`;
+            connectWalletBtn.classList.add('hidden');
+            mintButton.classList.remove('hidden');
+          } else {
+            if (confirm('Phantom Wallet not found. Install Phantom?')) {
+              window.open('https://phantom.app', '_blank');
+            }
+          }
+        } catch (err) {
+          console.error('Wallet connection failed:', err);
+          walletAddress.textContent = 'Connection failed. See console for details.';
+        }
+      }
+
+      async function mintNFT() {
+        // Placeholder mint flow. Replace with real transaction to your Solana program.
+        try {
+          if (!window.solana || !window.solana.isPhantom) {
+            throw new Error('Phantom not available');
+          }
+          
+          const provider = window.solana;
+          const pubkey = provider.publicKey;
+          
+          if (!pubkey) {
+            throw new Error('Wallet not connected');
+          }
+
+          // Example: create a simple transfer as placeholder
+          // In production, replace with actual NFT minting transaction
+          walletAddress.textContent = 'Minting... (This is a placeholder. Integrate real mint program to enable.)';
+          
+          // Simulate mint delay
+          setTimeout(() => {
+            walletAddress.textContent = 'Mint placeholder completed. Connect to real Solana program for actual minting.';
+          }, 2000);
+          
+        } catch (err) {
+          console.error('Mint failed:', err);
+          alert('Mint failed (placeholder). Integrate real mint program to enable.');
+        }
+      }
+
+      connectWalletBtn.addEventListener('click', connectWallet);
+      mintButton.addEventListener('click', mintNFT);
+    </script>
+
+    <!-- NFT Data Fetching Script -->
+    <script>
+      // Configuration - Update these with your actual NFT collection details
+      const NFT_CONFIG = {
+        // Option 1: Use a specific NFT mint address from LaunchMyNFT
+        mintAddress: 'YOUR_NFT_MINT_ADDRESS_HERE',
+
+        // Option 2: Use collection details
+        collectionAddress: 'YOUR_COLLECTION_ADDRESS_HERE',
+
+        // Fallback demo data
+        useDemoData: true
+      };
+
+      // Demo NFT data (replace with real data)
+      const DEMO_NFT_DATA = {
+        name: 'Genesis Ratata #39',
+        image: 'https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=600&h=400&fit=crop',
+        attributes: [
+          { trait_type: 'Rarity', value: 'Rare' },
+          { trait_type: 'Accessory', value: 'Party Hat' },
+          { trait_type: 'Food', value: 'Golden Cheese' }
+        ],
+        owner: 'ratata_owner',
+        price: 25
+      };
+
+      // Fetch NFT data from Solana blockchain
+      async function fetchNFTFromSolana(mintAddress) {
+        try {
+          const response = await fetch(`https://api.mainnet-beta.solana.com`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              jsonrpc: '2.0',
+              id: 1,
+              method: 'getAccountInfo',
+              params: [
+                mintAddress,
+                { encoding: 'jsonParsed' }
+              ]
+            })
+          });
+
+          const data = await response.json();
+
+          if (data.result && data.result.value) {
+            // Parse metadata from the account
+            return await parseNFTMetadata(data.result.value);
+          }
+
+          return null;
+        } catch (error) {
+          console.error('Error fetching NFT from Solana:', error);
+          return null;
+        }
+      }
+
+      // Parse NFT metadata
+      async function parseNFTMetadata(accountData) {
+        // In production, you would decode the account data and fetch metadata URI
+        // This is a simplified version
+        try {
+          // Typically NFT metadata is stored off-chain
+          // You would need to get the metadata URI from the account data
+          // and then fetch the JSON metadata
+          return null;
+        } catch (error) {
+          console.error('Error parsing metadata:', error);
+          return null;
+        }
+      }
+
+      // Fetch random NFT from your collection
+      async function fetchRandomNFT() {
+        // If using demo data
+        if (NFT_CONFIG.useDemoData) {
+          return DEMO_NFT_DATA;
+        }
+
+        // Try to fetch from Solana
+        if (NFT_CONFIG.mintAddress && NFT_CONFIG.mintAddress !== 'YOUR_NFT_MINT_ADDRESS_HERE') {
+          const nftData = await fetchNFTFromSolana(NFT_CONFIG.mintAddress);
+          if (nftData) return nftData;
+        }
+
+        // Fallback to demo data
+        return DEMO_NFT_DATA;
+      }
+
+      // Render NFT card
+      function renderNFTCard(nftData) {
+        const nftCard = document.getElementById('nftCard');
+
+        const attributes = nftData.attributes
+          .map(attr => attr.value)
+          .join(' • ');
+
+        const rarityTrait = nftData.attributes.find(attr => attr.trait_type === 'Rarity');
+        const rarity = rarityTrait ? rarityTrait.value : 'Common';
+
+        nftCard.innerHTML = `
+          <img
+            src="${nftData.image}"
+            alt="${nftData.name}"
+            class="hero-illustration"
+            onerror="this.src='https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=600&h=400&fit=crop'"
+          />
+          <div class="mt-4">
+            <h4 class="font-bold">${nftData.name}</h4>
+            <p class="text-sm text-gray-500">${rarity} — ${attributes}</p>
+            <div class="mt-3 flex items-center justify-between">
+              <span class="text-sm">Owner: @${nftData.owner}</span>
+              <button onclick="handleBuyNFT('${nftData.name}')" class="inline-flex items-center gap-2 px-3 py-2 bg-yellow-300 rounded shadow hover:shadow-md transition">
+                Buy • ${nftData.price} SOL
+              </button>
+            </div>
+          </div>
+        `;
+      }
+
+      // Handle NFT purchase
+      function handleBuyNFT(nftName) {
+        alert(`Purchase functionality for ${nftName} will be implemented with your LaunchMyNFT collection!`);
+        // Implement actual purchase logic here
+      }
+
+      // Initialize NFT display on page load
+      async function initializeNFTDisplay() {
+        try {
+          const nftData = await fetchRandomNFT();
+          renderNFTCard(nftData);
+        } catch (error) {
+          console.error('Error initializing NFT display:', error);
+          const nftCard = document.getElementById('nftCard');
+          nftCard.innerHTML = `
+            <div class="p-6 text-center">
+              <p class="text-red-500">Error loading NFT data</p>
+              <p class="text-sm text-gray-500 mt-2">Please check console for details</p>
+            </div>
+          `;
+        }
+      }
+
+      // Load NFT when page loads
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initializeNFTDisplay);
+      } else {
+        initializeNFTDisplay();
+      }
+    </script>
+
+  </body>
+</html>
