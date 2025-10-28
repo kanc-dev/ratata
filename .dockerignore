@@ -79,4 +79,3 @@ deploy.sh
 # Misc
 .eslintrc.json
 .prettierrc
-tsconfig.json
