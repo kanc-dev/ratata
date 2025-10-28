@@ -20,4 +20,4 @@ COPY --from=builder /app/public ./public
 COPY --from=builder /app/next.config.* ./
 
 EXPOSE 4001
-CMD ["npm", "start", "--", "-p", "5000", "-H", "0.0.0.0"]
+CMD ["npm", "start", "--", "-p", "4003", "-H", "0.0.0.0"]
